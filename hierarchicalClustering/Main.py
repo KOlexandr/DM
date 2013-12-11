@@ -77,9 +77,9 @@ def main():
     # one type of counting similarity better for one data and worse for another
     # as result i can say that type GROUP_AVERAGE worse for test data then MIN and MAX
 
-    hc = HierarchicalClustering(points_set, 3, 6, InterClassSimilarityType.MIN)
+    #hc = HierarchicalClustering(points_set, 3, 6, InterClassSimilarityType.MIN)
     #hc = HierarchicalClustering(points_set, 3, 20, InterClassSimilarityType.MAX)
-    #hc = HierarchicalClustering(points_set, 3, 6, InterClassSimilarityType.GROUP_AVERAGE)
+    hc = HierarchicalClustering(points_set, 3, 6, InterClassSimilarityType.GROUP_AVERAGE)
 
     print_clusters(hc.result_clusters)
     print("Noise:\n" + str(hc.noise_cluster))
