@@ -66,8 +66,8 @@ def main():
     """
     * main function
     """
-    points_set = read_points_from_file("test.txt")
-    dbscan = DBSCAN(4, 6, points_set)
+    points_set = read_points_from_file("data.txt")
+    dbscan = DBSCAN(10, 0.95, points_set)
     print_clusters(dbscan.clusters)
     print("Noise:\n" + str(dbscan.noise))
     plot_all_results(dbscan.clusters, dbscan.noise)
